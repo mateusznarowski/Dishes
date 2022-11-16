@@ -139,7 +139,7 @@ div:has(> select) > span::before, div:has(> select) > span::after {
   position: absolute;
   height: 0.75rem;
   width: 0.75rem;
-  translate: 0 110%;
+  translate: 0 100%;
 }
 div:has(> select) > span::before {
   border-bottom: 2px solid var(--dark-clr);

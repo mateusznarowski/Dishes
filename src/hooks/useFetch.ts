@@ -37,11 +37,11 @@ const useFetch = ({ url, data }: TUseFetch) => {
 
     setTimeout(() => {
       setStatus((prev) => ({ ...prev, isError: false, isSuccess: false }));
-    }, 3500);
+    }, 5000);
 
     setTimeout(() => {
       setStatus(initialStatus);
-    }, 4000);
+    }, 5500);
 
     if (JSON.stringify(data) !== '{}') {
       fetchData();
