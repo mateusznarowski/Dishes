@@ -1,0 +1,100 @@
+//================================================================//
+//===// Incorporating required default layout scss variables //===//
+//================================================================//
+
+@use '../abstracts' as *;
+
+//============================//
+//===// Layout - default //===//
+//============================//
+
+//===// Root //===//
+
+:root {
+  --shadow-big: 3px 3px 5px hsl(0 0% 0% / 0.15);
+  --shadow-small: 3px 3px 5px hsl(0 0% 0% / 0.1);
+}
+
+//===// Body //===//
+
+body {
+  background-color: color(accent-clr);
+  color: color(dark-clr);
+  font-family: font(main);
+  line-height: 1.5;
+}
+
+//===// Container //===//
+
+.container {
+  width: 80%;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+//===// Main //===//
+
+.main {
+  background-color: color(light-clr);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-big);
+  margin-block: 2rem;
+  padding: 2rem;
+}
+
+//===// Form //===//
+
+.form {
+  & > label {
+    display: block;
+    margin-block: 1.75rem 0.3rem;
+
+    &:first-child {
+      margin-block-start: 1.5rem;
+    }
+  }
+
+  & :is(input:not([type='range'], select)) {
+    width: 100%;
+    background-color: color(accent-clr);
+    border: none;
+    border-radius: 0.25em;
+    box-shadow: var(--shadow-small);
+    color: color(dark-clr);
+    font-size: 1rem;
+    padding: 0.65em 0.5em;
+  }
+
+  &__submit {
+    display: block;
+    width: 50%;
+    font-size: 1.25rem;
+    margin-block-start: 2.5rem;
+    margin-inline: auto;
+  }
+
+  &__message {
+    opacity: 0;
+    background-color: transparent;
+    box-shadow: var(--shadow-big);
+    border-radius: 0.5rem;
+    color: transparent;
+    text-align: center;
+    font-size: 1.15rem;
+    margin-block-end: 2rem;
+    padding: 0.5em 1em;
+    transition: 300ms ease-in-out;
+
+    &--success {
+      opacity: 1;
+      background-color: color(light-clr);
+      color: color(success-clr);
+    }
+
+    &--error {
+      opacity: 1;
+      background-color: color(light-clr);
+      color: color(error-clr);
+    }
+  }
+}

@@ -1,0 +1,29 @@
+//=========================================================//
+//===// Incorporating required buttons scss variables //===//
+//=========================================================//
+
+@use '../abstracts' as *;
+
+//===================//
+//===// Buttons //===//
+//===================//
+
+.btn {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  background: linear-gradient(to right, hsl(246 100% 76%), hsl(281 100% 78%));
+  border: none;
+  border-radius: 0.25em;
+  outline: none;
+  box-shadow: var(--shadow-big);
+  color: color(light-clr);
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  transition: scale 250ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    scale: 1.01;
+  }
+}

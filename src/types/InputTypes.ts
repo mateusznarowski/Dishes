@@ -1,13 +1,13 @@
 import { ChangeEvent } from 'react';
 
-type TInputProps = {
-  name?: string;
+type TDefaultProps = {
+  name: string;
   label?: string;
   placeholder?: string;
 };
 
-export type TUncontrolledInputProps = TInputProps & {
-  type?: 'text' | 'number' | 'time' | 'range';
+export type TInputProps = TDefaultProps & {
+  type: 'text' | 'number' | 'time' | 'range';
   range?: {
     step?: number;
     min?: number;
@@ -15,12 +15,7 @@ export type TUncontrolledInputProps = TInputProps & {
   };
 };
 
-export type TControlledInputProps = TUncontrolledInputProps & {
-  value: number | string | undefined;
-  update: (event: ChangeEvent<HTMLInputElement>) => void;
-};
-
-export type TSelectInputProps = TInputProps & {
+export type TSelectProps = TDefaultProps & {
   children: JSX.Element | JSX.Element[];
   value: number | string | undefined;
   update: (event: ChangeEvent<HTMLSelectElement>) => void;

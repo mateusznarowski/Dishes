@@ -7,13 +7,12 @@ type TUseFetch = {
 
 type TStatus = {
   isSuccess: boolean;
-  isFetching: boolean;
   isError: boolean;
-  message: string;
+  message: string | object;
 };
 
 const useFetch = ({ url, data }: TUseFetch) => {
-  const initialStatus = { isSuccess: false, isFetching: false, isError: false, message: '' };
+  const initialStatus = { isSuccess: false, isError: false, message: '' };
 
   const [status, setStatus] = useState<TStatus>(initialStatus);
 
@@ -27,20 +26,22 @@ const useFetch = ({ url, data }: TUseFetch) => {
     const fetchData = async () => {
       const response = await fetch(url, options);
 
-      setStatus((prev) => ({ ...prev, isFetching: true }));
-
       if (response.ok) {
-        setStatus((prev) => ({ ...prev, isFetching: false, isSuccess: true, message: 'Successfully sent' }));
+        setStatus((prev) => ({ ...prev, isSuccess: true, message: 'Successfully sent' }));
       } else {
-        const errorMessage = Object.values(JSON.parse(await response.text()));
+        const errorMessage = JSON.parse(await response.text());
 
-        setStatus((prev) => ({ ...prev, isFetching: false, isError: true, message: `${errorMessage}` }));
+        setStatus((prev) => ({ ...prev, isError: true, message: errorMessage }));
       }
     };
 
     setTimeout(() => {
+      setStatus((prev) => ({ ...prev, isError: false, isSuccess: false }));
+    }, 3500);
+
+    setTimeout(() => {
       setStatus(initialStatus);
-    }, 3000);
+    }, 4000);
 
     if (JSON.stringify(data) !== '{}') {
       fetchData();

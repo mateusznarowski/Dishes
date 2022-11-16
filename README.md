@@ -1,10 +1,7 @@
-## Information about the application environment
+## Info about the application
 
-    Node: v16.17.0
+    node: v16.17.0
     npm: 8.15.0
-
-    typescript: 4.6.4
-    vite: 3.2.3
 
 ---
 
@@ -13,19 +10,16 @@
 <br/>
 
 - directly under this [link](https://dishes.mndev.eu), or
-- by cloning the repository, and then in its location run in the terminal use the command
+- by cloning the repository, and at its location in the terminal run the following command
 
       npm install && npm run dev
 
-  application will be available at [localhost:3000](localhost:3000)
+  application will be available at [http://localhost:3000](http://localhost:3000)
 
 ---
 
-#### The time it took to complete the task:
+#### To complete the task, I spent about 6h
 
 <br />
-<br />
-
----
 
 #### Made by: Mateusz Narowski

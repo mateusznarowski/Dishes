@@ -1,0 +1,23 @@
+//==================//
+//===// Colors //===//
+//==================//
+
+body {
+  --light-clr: hsl(0 0% 98%);
+  --dark-clr: hsl(0 0% 20%);
+
+  --accent-clr: hsl(167 29% 92%);
+  --accent-clr--hover: hsl(168, 100%, 94%);
+
+  --success-clr: hsl(167, 29%, 40%);
+  --error-clr: hsl(340, 70%, 40%);
+}
+
+$color: (
+  'light-clr': var(--light-clr),
+  'dark-clr': var(--dark-clr),
+  'accent-clr': var(--accent-clr),
+  'accent-clr--hover': var(--accent-clr--hover),
+  'success-clr': var(--success-clr),
+  'error-clr': var(--error-clr),
+);

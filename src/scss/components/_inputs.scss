@@ -1,0 +1,94 @@
+//========================================================//
+//===// Incorporating required inputs scss variables //===//
+//========================================================//
+
+@use '../abstracts' as *;
+
+//==================//
+//===// Inputs //===//
+//==================//
+
+//===// Select //===//
+
+div:has(> select) {
+  position: relative;
+
+  & > select {
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    background-color: color(accent-clr);
+    border: none;
+    border-radius: 0.25em;
+    box-shadow: var(--shadow-small);
+    color: color(dark-clr);
+    font-size: 1rem;
+    padding: 0.65em 3rem 0.65em 0.5em;
+  }
+
+  & > span {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 1.6rem;
+    pointer-events: none;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      height: 0.75rem;
+      width: 0.75rem;
+      translate: 0 110%;
+    }
+
+    &::before {
+      border-bottom: 2px solid color(dark-clr);
+      rotate: -45deg;
+    }
+
+    &::after {
+      border-top: 2px solid color(dark-clr);
+      rotate: -135deg;
+    }
+  }
+}
+
+//===// Range //===//
+
+input[type='range'] {
+  --color: hsla(0 0% 0% / 0.15);
+
+  width: 100%;
+  appearance: none;
+  background: color(light-clr);
+
+  &::-webkit-slider-thumb {
+    height: 1.25rem;
+    width: 1rem;
+    cursor: pointer;
+    appearance: none;
+    background: #ffffff;
+    border: 1px solid var(--color);
+    border-radius: 0.25em;
+    box-shadow: 1px 1px 1px var(--color), 0px 0px 1px var(--color);
+    margin-block-start: -0.45rem;
+  }
+
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background-color: color(accent-clr);
+    border: 0.2px solid var(--color);
+    border-radius: 0.25em;
+    box-shadow: 1px 1px 1px var(--color), 0px 0px 1px var(--color);
+    transition: background-color 250ms ease-in-out;
+  }
+
+  &:focus::-webkit-slider-runnable-track {
+    background-color: color(accent-clr--hover);
+  }
+}

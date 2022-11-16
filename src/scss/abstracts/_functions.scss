@@ -1,0 +1,22 @@
+//==============================================//
+//===// Incorporating dependent scss files //===//
+//==============================================//
+
+@use './fonts' as *;
+@use './colors' as *;
+
+//=============================//
+//===// Map get functions //===//
+//=============================//
+
+//===// Fonts //===//
+
+@function font($font-name) {
+  @return map-get($font, $font-name);
+}
+
+//===// Colors //===//
+
+@function color($color-name) {
+  @return map-get($color, $color-name);
+}
