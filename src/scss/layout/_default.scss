@@ -63,10 +63,21 @@ body {
 
   label {
     display: block;
-    margin-block: 1.75rem 0.3rem;
+    margin-block: 1.75rem 0.35rem;
 
     &:first-child {
       margin-block-start: 1.5rem;
+    }
+  }
+
+  //===// Form > Focus on inputs
+
+  input,
+  select,
+  button {
+    &:focus {
+      outline: 2px solid color(secondary-clr);
+      outline-offset: 5px;
     }
   }
 

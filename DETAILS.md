@@ -13,6 +13,8 @@
 
 #### Look:
 
+- light and dark theme adjusted to user's preferred settings,
+
 - favicon suitable for the chosen color theme.
 
 #### Extras:

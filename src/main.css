@@ -179,11 +179,17 @@ body {
 }
 .form label {
   display: block;
-  margin-block: 1.75rem 0.3rem;
+  margin-block: 1.75rem 0.35rem;
 }
 .form label:first-child {
   -webkit-margin-before: 1.5rem;
           margin-block-start: 1.5rem;
+}
+.form input:focus,
+.form select:focus,
+.form button:focus {
+  outline: 2px solid var(--secondary-clr);
+  outline-offset: 5px;
 }
 .form input:not([type=range]) {
   width: 100%;
