@@ -8,7 +8,7 @@ const ControlledSelect = ({ name, label, placeholder, children, value, update }:
       <div>
         <select name={name} id={name} required onChange={update} value={value}>
           <option value='' disabled hidden>
-            Choose a {placeholder}
+            -- Choose a {placeholder} --
           </option>
           {children}
         </select>

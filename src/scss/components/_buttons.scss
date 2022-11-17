@@ -12,7 +12,7 @@
   user-select: none;
   -webkit-tap-highlight-color: transparent;
   cursor: pointer;
-  background: linear-gradient(to right, hsl(246 100% 76%), hsl(281 100% 78%));
+  background: linear-gradient(to right, color(btn-left-clr), color(btn-right-clr));
   border: none;
   border-radius: 0.25em;
   outline: none;

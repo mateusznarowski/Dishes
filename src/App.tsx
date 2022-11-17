@@ -17,16 +17,16 @@ const App = () => {
   return (
     <div className='container'>
       <main className='main'>
-        <h2 className='form-title'>Enter information about the dish</h2>
+        <h2 className='main__title'>Enter information about the dish</h2>
 
         <Form setData={setData} />
       </main>
 
-      <section className={`form-message ${isSuccess || isError ? 'form-message--visible' : ''}`}>
-        <p className={`form__message ${isSuccess ? 'form__message--success' : isError ? 'form__message--error' : ''}`}>
-          {formatMessage(message)}
-        </p>
-      </section>
+      {/* <section className={`message-wrapper ${isSuccess || isError ? 'message-wrapper--visible' : ''}`}> */}
+      <p className={`message ${isSuccess ? 'message--success' : isError ? 'message--error' : ''}`}>
+        {formatMessage(message)}
+      </p>
+      {/* </section> */}
     </div>
   );
 };

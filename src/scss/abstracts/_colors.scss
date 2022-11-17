@@ -2,22 +2,57 @@
 //===// Colors //===//
 //==================//
 
-body {
+:root {
   --light-clr: hsl(0 0% 98%);
   --dark-clr: hsl(0 0% 20%);
 
-  --accent-clr: hsl(167 29% 92%);
-  --accent-clr--hover: hsl(168, 100%, 94%);
+  --primary-clr: var(--light-clr);
+  --secondary-clr: var(--dark-clr);
 
-  --success-clr: hsl(167, 29%, 40%);
-  --error-clr: hsl(340, 70%, 40%);
+  --placeholder-clr: hsl(0 0% 50%);
+
+  --accent-clr: hsl(167 29% 92%);
+  --accent-clr--hover: hsl(167 29% 88%);
+
+  --btn-left-clr: hsl(186 100% 18%);
+  --btn-right-clr: hsl(201 100% 28%);
+
+  --success-clr: hsl(167 29% 40%);
+  --error-clr: hsl(340 70% 40%);
+
+  --favicon: red;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-clr: var(--dark-clr);
+    --secondary-clr: var(--light-clr);
+
+    --accent-clr: hsl(182 29% 20%);
+    --accent-clr--hover: hsl(182 29% 22%);
+
+    --btn-left-clr: hsl(186 100% 14%);
+    --btn-right-clr: hsl(201 100% 24%);
+
+    --success-clr: hsl(167 29% 65%);
+    --error-clr: hsl(340 70% 65%);
+  }
+
+  input {
+    color-scheme: dark;
+  }
 }
 
 $color: (
   'light-clr': var(--light-clr),
   'dark-clr': var(--dark-clr),
+  'primary-clr': var(--primary-clr),
+  'secondary-clr': var(--secondary-clr),
+  'placeholder-clr': var(--placeholder-clr),
   'accent-clr': var(--accent-clr),
   'accent-clr--hover': var(--accent-clr--hover),
+  'btn-left-clr': var(--btn-left-clr),
+  'btn-right-clr': var(--btn-right-clr),
   'success-clr': var(--success-clr),
   'error-clr': var(--error-clr),
 );
