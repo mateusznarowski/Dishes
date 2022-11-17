@@ -84,6 +84,7 @@ img {
   --primary-clr: var(--light-clr);
   --secondary-clr: var(--dark-clr);
   --placeholder-clr: hsl(0 0% 50%);
+  --focus-clr: hsl(167 29% 72%);
   --accent-clr: hsl(167 29% 92%);
   --accent-clr--hover: hsl(167 29% 88%);
   --btn-left-clr: hsl(186 100% 12%);
@@ -96,6 +97,7 @@ img {
   :root {
     --primary-clr: var(--dark-clr);
     --secondary-clr: var(--light-clr);
+    --focus-clr: hsl(182 29% 32%);
     --accent-clr: hsl(182 29% 20%);
     --accent-clr--hover: hsl(182 29% 22%);
     --btn-left-clr: hsl(182 29% 16%);
@@ -185,10 +187,10 @@ body {
   -webkit-margin-before: 1.5rem;
           margin-block-start: 1.5rem;
 }
-.form input:focus,
+.form input:not([type=range]):focus,
 .form select:focus,
 .form button:focus {
-  outline: 2px solid var(--secondary-clr);
+  outline: 2px solid var(--focus-clr);
   outline-offset: 5px;
 }
 .form input:not([type=range]) {
@@ -270,6 +272,10 @@ body {
   -webkit-margin-before: -0.45rem;
           margin-block-start: -0.45rem;
 }
+.form input[type=range]:focus::-webkit-slider-thumb {
+  outline: 2px solid var(--focus-clr);
+  outline-offset: 3px;
+}
 .form input[type=range]::-moz-range-thumb {
   height: 1.25rem;
   width: 1rem;
@@ -278,6 +284,10 @@ body {
   border-radius: 0.25em;
   box-shadow: 1px 1px 1px var(--color), 0px 0px 1px var(--color);
   border: 1px solid var(--color);
+}
+.form input[type=range]:focus::-moz-range-thumb {
+  outline: 2px solid var(--focus-clr);
+  outline-offset: 3px;
 }
 .form input[type=range]::-webkit-slider-runnable-track {
   width: 100%;

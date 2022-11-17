@@ -10,6 +10,7 @@
   --secondary-clr: var(--dark-clr);
 
   --placeholder-clr: hsl(0 0% 50%);
+  --focus-clr: hsl(167 29% 72%);
 
   --accent-clr: hsl(167 29% 92%);
   --accent-clr--hover: hsl(167 29% 88%);
@@ -25,6 +26,8 @@
   :root {
     --primary-clr: var(--dark-clr);
     --secondary-clr: var(--light-clr);
+
+    --focus-clr: hsl(182 29% 32%);
 
     --accent-clr: hsl(182 29% 20%);
     --accent-clr--hover: hsl(182 29% 22%);
@@ -47,6 +50,7 @@ $color: (
   'primary-clr': var(--primary-clr),
   'secondary-clr': var(--secondary-clr),
   'placeholder-clr': var(--placeholder-clr),
+  'focus-clr': var(--focus-clr),
   'accent-clr': var(--accent-clr),
   'accent-clr--hover': var(--accent-clr--hover),
   'btn-left-clr': var(--btn-left-clr),

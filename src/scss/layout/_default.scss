@@ -72,11 +72,12 @@ body {
 
   //===// Form > Focus on inputs
 
-  input,
+  input:not([type='range']),
   select,
   button {
     &:focus {
-      outline: 2px solid color(secondary-clr);
+      // outline: 2px solid color(secondary-clr);
+      outline: 2px solid color(focus-clr);
       outline-offset: 5px;
     }
   }
@@ -178,8 +179,18 @@ body {
       margin-block-start: -0.45rem;
     }
 
+    &:focus::-webkit-slider-thumb {
+      outline: 2px solid color(focus-clr);
+      outline-offset: 3px;
+    }
+
     &::-moz-range-thumb {
       @include thumb;
+    }
+
+    &:focus::-moz-range-thumb {
+      outline: 2px solid color(focus-clr);
+      outline-offset: 3px;
     }
 
     @mixin track {
