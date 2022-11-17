@@ -1,11 +1,11 @@
-## Info about the application
+## Info about the app
 
     node: v16.17.0
     npm: 8.15.0
 
 ---
 
-#### The application can be run in two ways:
+#### The app can be run in two ways:
 
 <br/>
 
@@ -14,7 +14,7 @@
 
       npm install && npm run dev
 
-  application will be available at [http://localhost:3000](http://localhost:3000)
+  app will be available at [http://localhost:3000](http://localhost:3000)
 
 ---
 
@@ -23,3 +23,5 @@
 <br />
 
 #### Made by: Mateusz Narowski
+
+#### App details: [Link](https://github.com/Malelus/Dishes/blob/main/DETAILS.md)
