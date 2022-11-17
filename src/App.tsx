@@ -22,11 +22,9 @@ const App = () => {
         <Form setData={setData} />
       </main>
 
-      {/* <section className={`message-wrapper ${isSuccess || isError ? 'message-wrapper--visible' : ''}`}> */}
       <p className={`message ${isSuccess ? 'message--success' : isError ? 'message--error' : ''}`}>
         {formatMessage(message)}
       </p>
-      {/* </section> */}
     </div>
   );
 };
