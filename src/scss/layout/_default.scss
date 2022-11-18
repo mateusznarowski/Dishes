@@ -76,7 +76,6 @@ body {
   select,
   button {
     &:focus {
-      // outline: 2px solid color(secondary-clr);
       outline: 2px solid color(focus-clr);
       outline-offset: 5px;
     }
