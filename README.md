@@ -9,7 +9,6 @@
 
 <br/>
 
-- directly under this [link](https://dishes.mndev.eu), or
 - by cloning the repository, and at its location in the terminal run the following command
 
       npm install && npm run dev
